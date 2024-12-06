@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
-const URL_DEFAULT = 'https://993f-37-214-34-213.ngrok-free.app'; // http://localhost:8080
+const URL_DEFAULT = 'https://963a-37-214-34-213.ngrok-free.app'; // http://localhost:8080
 
 function App() {
 
