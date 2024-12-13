@@ -71,7 +71,11 @@ http.createServer((request, response) => {
     if (request.url === '/start-stream' && request.method === 'POST') {
         response.writeHead(200, headers); // Добавляем CORS-заголовки
 
-        const ffmpegCommand = `ffmpeg -i rtsp://admin:testtest71@134.17.40.220/doc/page/preview.asp -fflags flush_packets -max_delay 2 -flags -global_header -hls_time 2 -hls_list_size 3 -vcodec copy -y ./videos/index.m3u8`;
+        const login = 'admin';
+        const passwd = 'testtest71';
+        const ipAddress = '134.17.174.108';
+        const urlffpeg = `rtsp://${login}:${passwd}@${ipAddress}/doc/page/preview.asp`;
+        const ffmpegCommand = `ffmpeg -i ${urlffpeg} -fflags flush_packets -max_delay 2 -flags -global_header -hls_time 2 -hls_list_size 3 -vcodec copy -y ./videos/index.m3u8`;
         exec(ffmpegCommand, (error, stdout, stderr) => {
             if (error) {
                 console.error(`Ошибка запуска ffmpeg: ${error.message}`);

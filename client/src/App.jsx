@@ -1,10 +1,10 @@
 import './App.css';
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
-const URL_DEFAULT = 'https://963a-37-214-34-213.ngrok-free.app'; // http://localhost:8080
+const URL_DEFAULT = 'https://496a-46-216-224-130.ngrok-free.app'; // http://localhost:8080
+// const URL_DEFAULT = 'http://127.0.0.1:8080';
 
 function App() {
-
   const [isPlaying, setIsPlaying] = useState(false);
   const startStream = async () => {
     try {
@@ -21,21 +21,6 @@ function App() {
       console.error('Error starting stream:', error);
     }
   };
-  // const cleanerON = async () => {
-  //   try {
-  //     const response = await fetch('http://localhost:8080/cleaner', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //     });
-  //     const data = await response.json();
-  //     setIsPlaying(!!data);
-  //   } catch (error) {
-  //     alert(error);
-  //     setIsPlaying(false);
-  //     console.error('Error starting stream:', error);
-  //   }
-  // };
-
 
   const play = () => {
     setIsPlaying(!isPlaying)
