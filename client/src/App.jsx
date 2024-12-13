@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
-const URL_DEFAULT = 'https://496a-46-216-224-130.ngrok-free.app'; // http://localhost:8080
+const URL_DEFAULT = 'https://rtsp-8vns-cr64m7mq6-korolstas-projects.vercel.app/'; // http://localhost:8080
 // const URL_DEFAULT = 'http://127.0.0.1:8080';
 
 function App() {
